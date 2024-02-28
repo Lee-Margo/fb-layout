@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            height:3000px;
+            background-color: lightgrey;
+            font-family: '微軟正黑體';
+            font-weight:700;
+        }
+        #nav{
+            background-color: white;
+            width: 100%;
+            height: 40px;
+            position:fixed;
+            z-index: 9;
+        }
+        #all{
+            background-color: white;
+            width: 80%;
+            height: 1000px;
+            margin: auto;
+            padding-top:60px;
+        }
+        #banner{
+            background-color: blueviolet;
+            width:90%;
+            height: 500px;
+            background-image: url(./banner.jpg);
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-position: 50% ;
+            position:relative;
+            margin:auto;
+        }
+        #avatar{
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+            position:absolute;
+            bottom: -100px;
+            left: 30px;
+            border-radius: 50%;
+            background-image: url(./Avatar.png);
+            background-repeat:no-repeat;
+            background-size: cover;
+        }
+        #icon-1{
+            background-color: lightgrey;
+            width: 30px;
+            height: 30px;
+            position:absolute;
+            left:10px;
+            top: calc(50% - 15px);
+            border-radius: 50%;
+            background-image:url(./svg/svgexport-1.svg);
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        #icon-2{
+            background-color: rgb(240,242,245);
+            width: 200px;
+            height: 30px;
+            position:absolute;
+            left: 60px;
+            top: calc(50% - 15px);
+            border-radius: 115PX;
+            background-image:url(./svg/icon-2.svg);
+            background-repeat: no-repeat;
+            background-size: 20px;
+            background-position-x: 5%;
+            background-position-y: 50%;
+            text-align: center;
+            color: rgb(185,193,201);
+            line-height: 30px;
+        }
+        #icon-mid{
+            background-color:white;
+            width: 40%;
+            height: 100%;
+            position:absolute;
+            left: calc(50% - 20%);
+        }
+        #icon-3{
+            background-color: white;
+            width: 30px;
+            height: 30px;
+            position:absolute;
+            left: calc(10% - 15px);
+            top: calc(50% - 15px);
+            border-radius: 50%;
+            background-image:url(./svg/icon-3.svg);
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        #icon-4{
+            background-color: white;
+            width: 30px;
+            height: 30px;
+            position:absolute;
+            left: calc(30% - 15px);
+            top: calc(50% - 15px);
+            border-radius: 50%;
+            background-image:url(./svg/icon-4.svg);
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        #icon-5{
+            background-color: white;
+            width: 40px;
+            height: 40px;
+            position:absolute;
+            left: calc(50% - 20px);
+            top: calc(50% - 20px);
+            border-radius: 50%;
+            background-image:url(./svg/icon-5.svg);
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        #icon-6{
+            background-color: white;
+            width: 40px;
+            height: 40px;
+            position:absolute;
+            right: calc(30% - 20px);
+            top: calc(50% - 20px);
+            border-radius: 50%;
+            background-image:url(./svg/icon-6.svg);
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        #icon-7{
+            background-color: white;
+            width: 40px;
+            height: 40px;
+            position:absolute;
+            left: calc(90% - 20px);
+            top: calc(50% - 20px);
+            border-radius: 50%;
+            background-image:url(./svg/icon-7.svg);
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        #icon-right{
+            background-color:white;
+            width: 15%;
+            height: 100%;
+            position:absolute;
+            right: 0;
+        }
+        #icon-8{
+            background-color: lightgrey;
+            width: 40px;
+            height: 40px;
+            position:absolute;
+            left: calc(15% - 20px);
+            top: calc(50% - 20px);
+            border-radius: 50%;
+            background-image:url(./svg/icon-8.svg);
+            background-repeat: no-repeat;
+            background-size: 60%;
+            background-position: 50%;
+        }
+        #icon-9{
+            background-color: lightgrey;
+            width: 40px;
+            height: 40px;
+            position:absolute;
+            left: calc(15% + (70%/3) - 20px);
+            top: calc(50% - 20px);
+            border-radius: 50%;
+            background-image:url(./svg/icon-9.svg);
+            background-repeat: no-repeat;
+            background-size: 60%;
+            background-position: 50%;
+        }
+        #icon-10{
+            background-color: lightgrey;
+            width: 40px;
+            height: 40px;
+            position:absolute;
+            left: calc(15% + (70%/3)*2 - 20px);
+            top: calc(50% - 20px);
+            border-radius: 50%;
+            background-image:url(./svg/icon-10.svg);
+            background-repeat: no-repeat;
+            background-size: 60%;
+            background-position: 50%;
+        }
+        #icon-11{
+            background-color: lightgrey;
+            width: 40px;
+            height: 40px;
+            position:absolute;
+            left: calc(15% + (70%/3)*3 - 20px);
+            top: calc(50% - 20px);
+            border-radius: 50%;
+            background-image:url(./Avatar.png);
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        #edit{
+            background-color: rgb(232,234,238);
+            width: calc(175px - 30px);
+            height: 40px;
+            position:absolute;
+            right: 20px;
+            bottom: 10px;
+            border-radius: 5%;
+            background-image: url(./svg/icons8-camera-30.png);
+            background-repeat:no-repeat;
+            background-size: 10%;
+            background-position: 15%;
+            text-align: center;
+            line-height: 2.5; 
+            font-weight: 700;
+            border-radius: 10px;
+            padding-left: 30px;
+        }
+        #camera-icon{
+            background-color: rgb(232,234,238);
+            width: 50px;
+            height: 50px;
+            position:absolute;
+            bottom: 0;
+            right: 0;
+            border-radius: 50%;
+            background-image: url(./svg/icons8-camera-30.png);
+            background-repeat:no-repeat;
+            background-size: 65%;
+            background-position: 50%;
+        }
+        #name{
+            background-color: white;
+            width: 100px;
+            height: 55px;
+            position:absolute;
+            bottom: -90px;
+            left: 240px; 
+            font-size: 25px;   
+            text-align: justify;       
+        }
+        #no-friends{
+            background-color: white;
+            width: 100px;
+            height: 25px;
+            position:absolute;
+            bottom: -10px;
+            left: 0;    
+            font-size: 12px;    
+            color: grey;     
+        }
+        #banner-right{
+            background-color: white;
+            height: 30px;
+            width: 40%;
+            position:absolute;
+            right: 20px;
+            bottom: -100px;
+        }
+        #edit-1{
+            background-color:blue;
+            height: 100%;
+            width: calc(8/18*100% - 10px );
+            color: white;
+            background-image: url(./svg/edit-1.svg);
+            background-repeat: no-repeat;
+            background-position-y: 50%;
+            background-position-x: 5%;
+            text-align: center;
+            line-height:1.8;
+            padding-left: 10px;
+            border-radius: 10px;
+        }
+        #edit-2{
+            background-color: rgb(232,234,238);
+            height: 100%;
+            width: calc(7/18*100% - 5px);
+            position:absolute;
+            left: calc(8.5/18*100%);
+            bottom:0;
+            line-height:1.8;
+            text-align: center;
+            background-image: url(./svg/icons8-edit-24.png);
+            background-repeat: no-repeat;
+            background-size: 16px;
+            background-position-x: 8px;
+            background-position-y: 7px;
+            padding-left: 5px;
+            border-radius: 10px;
+            
+        }
+        #edit-3{
+            background-color:rgb(232,234,238);
+            height: 100%;
+            width: calc(2/18*100%);
+            position:absolute;
+            left: calc(16/18*100%);
+            bottom:0;
+            border-radius: 10px;
+            background-image: url(./svg/edit-3.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #border{
+            background-color: white;
+            width: 80% ;
+            height: 100px;
+            border-top:3px solid grey;
+            position: absolute;
+            bottom: -200px;
+            left:10%;
+        }
+        #border-2{
+            background-color: aqua;
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div id="icon-1"></div>
+        <div id="icon-2">搜尋 Facebook</div>
+        <div id="icon-mid">
+            <div id="icon-3"></div>
+            <div id="icon-4"></div>
+            <div id="icon-5"></div>
+            <div id="icon-6"></div>
+            <div id="icon-7"></div>
+        </div>
+        <div id="icon-right">
+            <div id="icon-8"></div>
+            <div id="icon-9"></div>
+            <div id="icon-10"></div>
+            <div id="icon-11"></div>
+        </div>        
+    </div>
+    <div id="all">
+        <div id="banner">
+            <div id="edit">編輯封面相片</div>
+            <div id="avatar">
+                <div id="camera-icon"></div>
+            </div>
+            <div id="name">李依宸
+                <div id="no-friends">450 位朋友</div>
+            </div>
+            <div id="banner-right">
+                <div id="edit-1">新增到限時動態</div>
+                <div id="edit-2">編輯個人檔案</div>
+                <div id="edit-3"></div>
+            </div>
+        </div>
+        <div id="border"></div>
+        <div id="border-2"></div>
+    </div>
+
+</body>
+</html>
